@@ -36,7 +36,7 @@ const App = ()=>{
 
 	return (
 	<div style={{textAlign :"center"}}>
-	{count.map((val,ind) => <Counter key= {ind} count={val} increment = {()=>increment(ind)} del={()=>del(ind) }/>)}
+	{count.map((val,ind) => <Counter key= {ind} count={val} increment = {()=>increment(ind)} decrement = {()=>decrement(ind)} del={()=>del(ind) }/>)}
 		<br />
 		<button onClick={addcounter}>Add Counter</button>
 	</div>
