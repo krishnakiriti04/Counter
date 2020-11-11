@@ -5,7 +5,8 @@ const Counter = ({count, increment, del})=>{
 	return (
 		<div>
 			<h4>{count}</h4>
-			<button onClick={()=>increment()}>Count</button>
+			<button onClick={()=>increment()}>Increase</button>
+			<button onClick={()=>decrement()}>Decrease</button>
 			<button onClick={()=>del()}>Delete</button>
 		</div>
 		)
@@ -20,6 +21,11 @@ const App = ()=>{
 
 	const increment = (currInd)=>{
 		let newVal = count.map((val,ind)=>currInd===ind ? val = val+1: val );
+		setCount(newVal);
+	}
+
+	const decrement = (currInd)=>{
+		let newVal = count.map((val,ind)=>currInd===ind ? val = val-1: val );
 		setCount(newVal);
 	}
 
