@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
 
-const Counter = ({count, increment, del})=>{
+const Counter = ({count, increment,decrement, del})=>{
 	return (
 		<div>
 			<h4>{count}</h4>
